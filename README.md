@@ -3,174 +3,261 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>تعلم اللغة الكورية - موقع تعليمي</title>
+  <title>كوريا بالعربي | أول موقع احترافي لتعلم اللغة الكورية</title>
+  <meta name="description" content="تعلم اللغة الكورية بالعربية بأسلوب عصري، فيديوهات، قواعد، مفردات، وتمارين تفاعلية." />
+  <meta name="keywords" content="تعلم الكورية, قواعد اللغة الكورية, مفردات كورية, كوريا بالعربي, تعليم كوريا جيل زد" />
+  <meta name="author" content="كوريا بالعربي" />
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f8ff;
-      color: #333;
+    @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+    * {
+      box-sizing: border-box;
       margin: 0; padding: 0;
-      direction: rtl;
+    }
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
     header {
-      background-color: #4a90e2;
-      padding: 20px;
+      background: #1e3c72;
+      color: #fff;
+      padding: 25px 20px;
       text-align: center;
-      color: white;
-      font-weight: bold;
-      font-size: 24px;
-      letter-spacing: 2px;
-      box-shadow: 0 4px 8px rgba(74,144,226,0.4);
+      font-size: 2.5rem;
+      font-weight: 900;
+      letter-spacing: 3px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      user-select: none;
     }
     nav {
+      background: #112d4e;
       display: flex;
       justify-content: center;
-      background: #1e5799; /* أزرق داكن */
-      gap: 15px;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      gap: 20px;
+      padding: 15px 0;
+      box-shadow: inset 0 -3px 5px rgba(0,0,0,0.3);
     }
     nav a {
-      color: #fff;
+      color: #f0f0f0;
       text-decoration: none;
-      font-size: 18px;
-      padding: 8px 15px;
-      border-radius: 8px;
-      transition: background 0.3s ease;
+      font-size: 1.2rem;
+      padding: 8px 20px;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     nav a:hover {
-      background-color: #7db9e8;
+      background-color: #f9a825;
       color: #000;
+      cursor: pointer;
+      box-shadow: 0 0 8px #f9a825;
     }
     main {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 15px 40px 15px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      flex-grow: 1;
+      max-width: 1100px;
+      margin: 40px auto 80px;
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease forwards;
     }
-    h1, h2 {
-      color: #0f3b8a;
+    main h1 {
+      font-size: 2.7rem;
+      color: #1e3c72;
+      margin-bottom: 25px;
+      letter-spacing: 1.5px;
+    }
+    main p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 35px;
+      max-width: 800px;
+      user-select: text;
+    }
+    .btn {
+      display: inline-block;
+      background: #f9a825;
+      color: #000;
+      font-weight: 700;
+      padding: 15px 35px;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 5px 12px rgba(249,168,37,0.5);
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    .btn:hover {
+      background: #fbc02d;
+      box-shadow: 0 8px 20px rgba(251,192,45,0.7);
+      cursor: pointer;
+    }
+    section.features {
+      display: flex;
+      justify-content: space-around;
+      gap: 25px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    section.features .feature-box {
+      background: #f0f4f8;
+      border-radius: 18px;
+      padding: 25px 20px;
+      flex: 1 1 300px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+      transition: transform 0.3s ease;
+      user-select: none;
+    }
+    section.features .feature-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+    section.features h3 {
+      font-size: 1.5rem;
+      color: #1e3c72;
       margin-bottom: 15px;
+      text-align: center;
     }
-    p {
-      line-height: 1.6;
-      font-size: 17px;
-    }
-    ul {
-      margin: 15px 0 30px 0;
-      padding-inline-start: 20px;
+    section.features p {
+      font-size: 1rem;
+      color: #555;
+      text-align: center;
+      line-height: 1.5;
     }
     footer {
-      background: #4a90e2;
-      color: white;
+      background: #1e3c72;
+      color: #fff;
       text-align: center;
-      padding: 15px 0;
+      padding: 18px 15px;
+      font-size: 0.9rem;
+      user-select: none;
+      box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
       position: fixed;
       width: 100%;
       bottom: 0;
-      font-size: 14px;
-      letter-spacing: 1px;
     }
-    /* زر التبديل بين الصفحات */
-    .hidden {
-      display: none;
+
+    /* انيميشن دخول */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(15px);}
+      to {opacity: 1; transform: translateY(0);}
     }
-    /* تنسيق القوائم */
-    .list-word {
-      margin-bottom: 10px;
-      background: #e8f0fe;
-      padding: 10px;
-      border-radius: 8px;
-      font-weight: 600;
-    }
-    .term {
-      font-weight: bold;
-      color: #2a2a72;
-    }
-    /* تصميم بسيط للمصطلحات */
-    .z-term {
-      background: #ffe4e1;
-      margin-bottom: 12px;
-      padding: 12px 15px;
-      border-radius: 12px;
-      font-size: 18px;
-      box-shadow: 2px 2px 8px rgba(255, 99, 71, 0.2);
-      cursor: default;
-      user-select: none;
-      transition: transform 0.15s ease-in-out;
-    }
-    .z-term:hover {
-      transform: scale(1.05);
-      box-shadow: 3px 3px 12px rgba(255, 99, 71, 0.4);
+
+    /* Responsive */
+    @media (max-width: 800px) {
+      main {
+        margin: 30px 15px 90px;
+        padding: 30px 20px;
+      }
+      section.features {
+        flex-direction: column;
+        gap: 20px;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>تعلم اللغة الكورية بالعربية 🇰🇷✨</header>
+<header>كوريا بالعربي 🇰🇷 | أول موقع احترافي لتعلم الكورية بالعربية</header>
 
 <nav>
-  <a href="#" onclick="showPage('home')">الرئيسية</a>
-  <a href="#" onclick="showPage('grammar')">قواعد اللغة</a>
-  <a href="#" onclick="showPage('vocab')">المفردات</a>
-  <a href="#" onclick="showPage('zterms')">مصطلحات جيل Z</a>
+  <a href="#home" onclick="navigate(event, 'home')">الرئيسية</a>
+  <a href="#grammar" onclick="navigate(event, 'grammar')">قواعد اللغة</a>
+  <a href="#vocab" onclick="navigate(event, 'vocab')">المفردات</a>
+  <a href="#zterms" onclick="navigate(event, 'zterms')">مصطلحات جيل Z</a>
 </nav>
 
 <main>
-  <section id="home">
-    <h1>مرحباً بك في عالم اللغة الكورية!</h1>
-    <p>هنا ستبدأ رحلتك الممتعة لتعلم اللغة الكورية بطريقة مبسطة وسلسة، مع تركيز خاص على القواعد، المفردات، وأحدث مصطلحات جيل Z.</p>
-    <p>ابدأ باختيار أحد الأقسام أعلاه لتكتشف المزيد.</p>
+  <section id="home-section">
+    <h1>مرحباً بك في كوريا بالعربي!</h1>
+    <p>اكتشف جمال اللغة الكورية بأسلوب عصري وممتع مع دروس سهلة، فيديوهات تعليمية، وتمارين تفاعلية تناسب جميع المستويات. هنا مكانك لتبدأ رحلتك مع كوريا من الصفر إلى الاحتراف!</p>
+    <a href="#grammar" class="btn" onclick="navigate(event, 'grammar')">ابدأ التعلم الآن</a>
+
+    <section class="features" aria-label="ميزات الموقع">
+      <div class="feature-box">
+        <h3>قواعد اللغة ببساطة</h3>
+        <p>شرح مبسط للقواعد مع أمثلة سهلة تقدر تفهمها بسرعة وتبدأ تستخدمها.</p>
+      </div>
+      <div class="feature-box">
+        <h3>مفردات يومية</h3>
+        <p>تعلم كلمات وعبارات مستخدمة يومياً تساعدك في محادثاتك اليومية.</p>
+      </div>
+      <div class="feature-box">
+        <h3>مصطلحات جيل Z</h3>
+        <p>اكتشف أحدث التعبيرات والمصطلحات التي يستخدمها الشباب الكوري لتكون على تواصل معهم.</p>
+      </div>
+    </section>
   </section>
 
-  <section id="grammar" class="hidden">
+  <section id="grammar-section" style="display:none;">
     <h2>قواعد اللغة الكورية</h2>
     <ul>
-      <li><strong>الترتيب في الجملة:</strong> في الكورية، الفعل دائماً يأتي في نهاية الجملة.</li>
-      <li><strong>الجسيمات (Particles):</strong> مثل 은/는 (للموضوع)، 을/를 (للمفعول به)، 이/가 (للفاعل).</li>
-      <li><strong>تصريف الأفعال:</strong> يعتمد على الاحترام والزمن، مثل الماضي، الحاضر، والمستقبل.</li>
-      <li><strong>الضمائر:</strong> تختلف حسب المستوى الاجتماعي، وهناك ضمائر غير مستخدمة كثيراً.</li>
+      <li><strong>ترتيب الجملة:</strong> الفعل دائماً في نهاية الجملة.</li>
+      <li><strong>الجسيمات (Particles):</strong> 은/는، 을/를، 이/가.</li>
+      <li><strong>تصريف الأفعال:</strong> حسب الزمن والاحترام.</li>
+      <li><strong>الضمائر:</strong> تختلف حسب الموقف الاجتماعي.</li>
     </ul>
-    <p>مثال: أنا أدرس اللغة الكورية = 저는 한국어를 공부해요.</p>
+    <p>مثال: 저는 한국어를 공부해요. (أنا أدرس اللغة الكورية)</p>
   </section>
 
-  <section id="vocab" class="hidden">
-    <h2>مفردات شائعة</h2>
-    <div class="list-word">안녕하세요 (أن-ني-هونغ-ها-سي-يو) - مرحباً</div>
-    <div class="list-word">감사합니다 (كام-سا-هم-ني-دا) - شكراً</div>
-    <div class="list-word">사랑해요 (سا-رانغ-هي-يو) - أحبك</div>
-    <div class="list-word">친구 (تشين-غو) - صديق</div>
-    <div class="list-word">학교 (هاك-كيو) - مدرسة</div>
+  <section id="vocab-section" style="display:none;">
+    <h2>المفردات الشائعة</h2>
+    <ul>
+      <li>안녕하세요 (أن-ني-هونغ-ها-سي-يو) - مرحباً</li>
+      <li>감사합니다 (كام-سا-هم-ني-دا) - شكراً</li>
+      <li>사랑해요 (سا-رانغ-هي-يو) - أحبك</li>
+      <li>친구 (تشين-غو) - صديق</li>
+      <li>학교 (هاك-كيو) - مدرسة</li>
+    </ul>
   </section>
 
-  <section id="zterms" class="hidden">
-    <h2>مصطلحات جيل Z الكورية</h2>
-    <div class="z-term"><span class="term">대박 (ديباب)</span>: تعبير يعني "رائع" أو "مذهل".</div>
-    <div class="z-term"><span class="term">꿀잼 (كول-جيم)</span>: تعني "ممتع جداً" أو "شيء ممتع".</div>
-    <div class="z-term"><span class="term">헐 (هول)</span>: تعبير عن الصدمة أو التعجب، يشبه "يا إلهي".</div>
-    <div class="z-term"><span class="term">소확행 (سو-هواك-هيونغ)</span>: تعني "سعادة صغيرة مؤكدة"، الأشياء البسيطة التي تجلب السعادة.</div>
-    <div class="z-term"><span class="term">인싸 (إن-سا)</span>: الشخص الاجتماعي أو المتفاعل بشدة مع المجتمع.</div>
-    <div class="z-term"><span class="term">아싸 (آ-سا)</span>: العكس، الشخص المنعزل أو غير الاجتماعي.</div>
+  <section id="zterms-section" style="display:none;">
+    <h2>مصطلحات جيل Z</h2>
+    <ul>
+      <li><strong>대박 (ديباب):</strong> رائع، مذهل.</li>
+      <li><strong>꿀잼 (كول-جيم):</strong> ممتع جداً.</li>
+      <li><strong>헐 (هول):</strong> تعجب أو صدمة.</li>
+      <li><strong>소확행 (سو-هواك-هيونغ):</strong> سعادة صغيرة مؤكدة.</li>
+      <li><strong>인싸 (إن-سا):</strong> شخص اجتماعي.</li>
+      <li><strong>아싸 (آ-سا):</strong> شخص منعزل.</li>
+    </ul>
   </section>
 </main>
 
-<footer>حقوق النشر &copy; 2025 | موقع تعلم اللغة الكورية بالعربية</footer>
+<footer>حقوق النشر &copy; 2025 | كوريا بالعربي</footer>
 
 <script>
-  function showPage(pageId) {
-    // إخفاء جميع الصفحات
-    const sections = document.querySelectorAll('main > section');
-    sections.forEach(section => {
-      if(section.id === pageId){
-        section.classList.remove('hidden');
+  function navigate(event, section) {
+    event.preventDefault();
+    const sections = ['home', 'grammar', 'vocab', 'zterms'];
+    sections.forEach(sec => {
+      const el = document.getElementById(sec + '-section');
+      if (sec === section) {
+        el.style.display = 'block';
+        window.location.hash = sec;
       } else {
-        section.classList.add('hidden');
+        el.style.display = 'none';
       }
     });
   }
+  // اظهار الصفحة الافتراضية عند تحميل الموقع
+  window.onload = () => {
+    const hash = window.location.hash.replace('#', '');
+    const validSections = ['home', 'grammar', 'vocab', 'zterms'];
+    if(validSections.includes(hash)){
+      navigate(new Event('load'), hash);
+    } else {
+      navigate(new Event('load'), 'home');
+    }
+  };
 </script>
 
 </body>
 </html>
+
